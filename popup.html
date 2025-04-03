@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DuoTracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="icons/icon128.png" alt="DuoTracker Logo">
+        <h1>DuoTracker</h1>
+    </div>
+
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Your Duolingo username">
+            <button id="trackBtn">Check Non-Followers</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing profile...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="profile-header">
+                <img id="profile-pic" src="" alt="Profile picture">
+                <div>
+                    <h2 id="display-name"></h2>
+                    <p id="username-display" class="username"></p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total XP</h3>
+                    <p id="total-xp" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Followers</h3>
+                    <p id="followers-count" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Following</h3>
+                    <p id="following-count" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Non-Followers</h3>
+                    <p id="non-followers" class="stat-value">0</p>
+                </div>
+            </div>
+
+            <div class="non-followers-list">
+                <h3>People you follow who don't follow you back:</h3>
+                <ul id="non-followers-list"></ul>
+            </div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
